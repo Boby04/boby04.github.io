@@ -1,13 +1,714 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portafoli</title>
+
+  <style>
+    .card {
+      border: none;
+      padding: 10px 50px;
+    }
+
+    .card::after {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .card:hover {
+
+
+      transform: scale(1.02, 1.02);
+      -webkit-transform: scale(1.02, 1.02);
+      backface-visibility: hidden;
+      will-change: transform;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, .75) !important;
+    }
+
+    .card:hover::after {
+      opacity: 1;
+    }
+
+    .card:hover .btn-outline-primary {
+      color: white;
+      background: #007bff;
+    }
+  </style>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/portafoli.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
+
 <body>
-    <p>HOLA</p>
-    <p>ADEU</p>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre mi</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Estudis</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portafoli</span></a>
+        </li>
+        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Servicis</span></a></li>
+        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contacte</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Roberto Ionut</h1>
+      <p>Estudio <span class="typed"
+          data-typed-items="Programació, Seguretat Informatica, Sistemes Operatius, Muntatge i Manteniment"></span></p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Sobre mi</h2>
+          <p>Sóc un noi de 18 anys que actualment està cursant un cicle mitjà de Sistemes Microinformàtics i Xarxes a
+            l'Institut de l'Ebre, situat a Tortosa. Em trobo en el segon any d'aquest cicle i estic a punt d'obtenir el
+            títol corresponent. La matèria de programació desperta en mi un gran interès i confio en la possibilitat de
+            poder treballar en aquest àmbit en un futur proper.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="assets/img/roberto.jpg" style="width: 500px; height: 600px;" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3>Estudiant - Sistemes Microinformàtics i Xarxes</h3>
+            <p class="fst-italic">
+              Aquestes són algunes dades meves sobre mí:
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Naixement:</strong> <span>9 de Setembre de 2004</span>
+                  </li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Telefono:</strong> <span>+34 641391081</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Ciutat:</strong> <span>Mas de Barberans</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Anys:</strong> <span>18</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Província:</strong> <span>Tarragona</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Correu:</strong> <span>rpohrib@iesebre.com</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p style="margin-top: 30px;">
+              Els meus plans de futur inclouen la consecució d'un Grau Superior de DAM (Desenvolupament d'Aplicacions
+              Multiplataforma). Amb aquesta formació, aspire a enriquir la meva base de coneixements i aprofundir en les
+              habilitats relacionades amb el desenvolupament d'aplicacions en múltiples plataformes. Després de
+              completar els meus estudis, m'agradaria participar en un programa de formació dual, combinant
+              l'aprenentatge acadèmic amb una experiència pràctica en una empresa del sector. Aquesta oportunitat em
+              permetrà adquirir una visió més realista de la vida laboral i desenvolupar competències essencials per al
+              meu futur professional. Estic entusiasmat per aprendre de professionals experimentats i contribuir
+              activament en projectes reals, així com per aplicar els meus coneixements teòrics en un entorn empresarial
+              dinàmic. A través d'aquesta experiència, estic convençut que podré forjar una base sòlida per a la meva
+              carrera i assolir els meus objectius professionals a llarg termini.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Habilitats</h2>
+          <p>En aquests 2 anys de SMX he après moltes habilitats, i alguna d'elles són:</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">35%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">Sefuretat Informatica<i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Màquines Virtuals <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Muntatge i manteniment d'equips informatics<i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Estudis i experiència professional</h2>
+          <p>Com a estudiant encara estic en procés d'obtenir més estudis, però els estudis actuals i les experiències
+            que tinc fins aquest moment són aquestes:</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Resum</h3>
+            <div class="resume-item pb-0">
+              <h4>Roberto Ionut</h4>
+              <p><em>Sóc un noi de 18 anys que actualment està cursant un cicle mitjà de Sistemes Microinformàtics i
+                  Xarxes a
+                  l'Institut de l'Ebre, situat a Tortosa.</em></p>
+              <ul>
+                <li>Mas de Barberans, Tarragona</li>
+                <li>(+34) 641391081</li>
+                <li>rpohrib@iesebre.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Estudis</h3>
+            <div class="resume-item">
+              <h4>ESO</h4>
+              <h5>2017-2021</h5>
+              <p><em>Santa Bàrbara, Catalunya</em></p>
+              <p>Durant els últims quatre anys, he completat l'Educació Secundària Obligatòria a l'Institut de Santa
+                Bàrbara, on he adquirit un ampli ventall d'habilitats relacionades amb el camp de la informàtica.
+                Aquesta formació ha sentat les bases fonamentals per a la meva progressió en el cicle de Sistemes
+                Microinformàtics i Xarxes (SMX), on he tingut l'oportunitat de posar en pràctica diverses tècniques i
+                mètodes relacionats amb aquest àmbit.</p>
+            </div>
+            <div class="resume-item">
+              <h4>Títol del cicle mitja SMX</h4>
+              <h5>2021-2023</h5>
+              <p><em>Tortosa, Catalunya</em></p>
+              <p>Actualment, encara estic cursant el cicle mitjà d'informàtica, però aviat obtindre el títol i
+                seguidament continuaré amb un cicle superior. En aquests dos anys he pogut pràctica físicament
+                moltíssimes coses i he après molta informació útil.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Experiència professional</h3>
+            <div class="resume-item">
+              <h4>Pràctiques biblioteca a Santa Bàrbara (Smartcentre)</h4>
+              <h5>2023</h5>
+              <p><em>Santa Bàrbara, Catalunya</em></p>
+              <ul>
+                <li>He aprés com manejar i com configurar les impressores 3D, he fet moltes peçes per al personal públic
+                </li>
+                <li>He donat classe d'informatica per a xiquets petits i inclus hem ajudat a les persones que tenien
+                  algun dupte</li>
+                <li>He apres manipular les ulleres 3D i les diferents aplicacions que hi han dins del mon virtual</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfoli</h2>
+          <p>Aquestes són algunes pràctiques de html que he fet durant aquestos anys</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">TOT</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="https://i.ytimg.com/vi/um4fSg60gas/maxresdefault.jpg" class="img-fluid" style="width: 500px; height: 250px;"
+                alt="">
+              <div class="portfolio-info">
+                <h4>Pàgina web Teardown</h4>
+                <div class="portfolio-links">
+                  <a href="https://github.com/Boby04/Pagina_web_Teardown"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="https://i.blogs.es/d4557b/microsoft-sudokus-1/1366_2000.jpg" class="img-fluid" style="width: 500px; height: 250px;"
+                alt="">
+              <div class="portfolio-info">
+                <h4>Sudoku</h4>
+                <div class="portfolio-links">
+                  <a href="https://github.com/Boby04/Sudoku"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="https://web.ua.es/va/accesibilidad/imagenes/documentos/formularios/etiquetas-de-formularios.png" class="img-fluid" style="width: 500px; height: 250px;"
+                alt="">
+              <div class="portfolio-info">
+                <h4>Formularis</h4>
+                <div class="portfolio-links">
+                  <a href="https://github.com/Boby04/Formularis"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="https://i.ytimg.com/vi/PwWHL3RyQgk/maxresdefault.jpg" class="img-fluid" style="width: 500px; height: 250px;"
+                alt="">
+              <div class="portfolio-info">
+                <h4>Barra menú animada</h4>
+                <div class="portfolio-links">
+                  <a href="https://github.com/Boby04/Barra_menu_animada"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="https://i.ytimg.com/vi/4FWyJCEQBrs/maxresdefault.jpg" class="img-fluid" style="width: 500px; height: 250px;"
+                alt="">
+              <div class="portfolio-info">
+                <h4>Imatges animades</h4>
+                <div class="portfolio-links">
+                  <a href="https://github.com/Boby04/Imatges_animades"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/sintesi.png" class="img-fluid" style="width: 500px; height: 250px;"
+                alt="">
+              <div class="portfolio-info">
+                <h4>Pàgina web projecte Síntesi</h4>
+                <div class="portfolio-links">
+                  <a href="https://github.com/Boby04/Pagina_web_projecte_Sintesi"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+
+    <div id="services" class="section-title">
+      <h2>Preus</h2>
+      <p>Aquestos són els meus serveis que ofereixo a les persones sobre creació de pàgines web:</p>
+    </div>
+
+
+    <div class="container-fluid" style="background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);">
+      <div class="container p-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card h-100 shadow-lg">
+              <div class="card-body">
+                <div class="text-center p-3">
+                  <h5 class="card-title">Bàsic</h5>
+                  <small>Individual</small>
+                  <br><br>
+                  <span class="h2">80€</span>/mes
+                  <br><br>
+                </div>
+                <p class="card-text">Els serveis que ofereix aquest plan són:</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                  </svg>2GB d'almacenament</li>
+                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                  </svg>1 pàgina web</li>
+              </ul>
+              <div class="card-body text-center">
+                <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card h-100 shadow-lg">
+              <div class="card-body">
+                <div class="text-center p-3">
+                  <h5 class="card-title">Estàndard</h5>
+                  <small>Petita empresa</small>
+                  <br><br>
+                  <span class="h2">150€</span>/mes
+                  <br><br>
+                </div>
+                <p class="card-text">Els serveis que ofereix aquest plan són:</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                  </svg>8GB d'almacenament</li>
+                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                  </svg>5 pàgines web</li>
+                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                  </svg>4 usuaris + assessor</li>
+              </ul>
+              <div class="card-body text-center">
+                <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card h-100 shadow-lg">
+              <div class="card-body">
+                <div class="text-center p-3">
+                  <h5 class="card-title">Premium</h5>
+                  <small>Grans Empreses</small>
+                  <br><br>
+                  <span class="h2">300€</span>/mes
+                  <br><br>
+                </div>
+                <p class="card-text">Els serveis que ofereix aquest plan són:</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                  </svg> 15GB d'almacenament</li>
+                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                  </svg>10 pàgines web</li>
+                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                  </svg>8 usuaris + assessor</li>
+                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                  </svg>3 dominis gratis</li>
+              </ul>
+              <div class="card-body text-center">
+                <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"></script>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonis</h2>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/narcis.png" class="testimonial-img" alt="">
+                <h3>Narcís Lleixà</h3>
+                <h4>Estudiant</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  En Roberto és un noi normal, amic dels seus amics, és molt generos amb els seus companys i respectuos.
+                  Ell ajuda sense esperar res a canvi als seus companys, i te una gran capacitat de lideratge encara que
+                  estant al seu costat
+                  les carteres corren perill. Pero es bona gent.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/marc.png" class="testimonial-img" alt="">
+                <h3>Marc Muria</h3>
+                <h4>Estudiant</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  És un bon amic, sempre m'ha ajudat en qualsevol dupte, encara que a vegades discutim per el resultat.
+                  A l'hora de treballar en equi sap com liderar i com organitzar a totes les persones a que treballes
+                  per igual.
+                  Des del meu punt de vista en un molt bon companyer i amic.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/gerard.png" class="testimonial-img" alt="">
+                <h3>Gerard Vidal</h3>
+                <h4>Prefessor</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Un dels aspectes més destacats de Roberto és la seva habilitat per resoldre conflictes dins de l'equip
+                  de treball. Té una gran capacitat per entendre diferents punts de vista i trobar solucions que
+                  satisfacin a tots els membres. La seva diplomàcia i empatia contribueixen a crear un ambient de
+                  treball harmoniós i a mantenir un nivell elevat de col·laboració.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contacte</h2>
+        </div>
+
+        <div class="row mt-1">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Ubicació:</h4>
+                <p>Mas de Barberans, Catalunya</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Correu:</h4>
+                <p>rpohrib@iesebre.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Telèfon:</h4>
+                <p>+34 641391081</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nom" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Correu" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assumpte" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Missatge" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Càrregant</div>
+                <div class="error-message"></div>
+                <div class="sent-message">El seu missatge ha estat enviat. Gràcies!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar Missatge</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Roberto Ionut</h3>
+      <p>Aquestos són les meves reds socials per si vos interesa:</p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: [license-url] -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
